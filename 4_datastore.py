@@ -55,5 +55,4 @@ for x in datastore["medical"]:
   temp = []
   for key in x:
     temp.append(x[key])
-  print(temp)
   writer_file.writerow(temp)
