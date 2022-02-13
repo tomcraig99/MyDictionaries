@@ -6,8 +6,8 @@ print()
 print('*****  start section 1 - print dictionary ********')
 print()
 
-
-
+'''
+print(phonebook)
 
 
 print()
@@ -26,7 +26,8 @@ print('*****  start section 2 - search dictionary ********')
 print()
 
 
-
+key = input('Enter name to search: ')
+print(phonebook[key])
 
 
 
@@ -44,8 +45,8 @@ print()
 print('*****  start section 3 - edit/append dictionary ********')
 print()
 
-
-
+phonebook['Chris'] = '555-1112'
+phonebook['John'] = '555-0123'
 
 
 print()
@@ -62,7 +63,7 @@ print('*****  start section 4 - delete/remove from dictionary ********')
 print()
 
 
-
+del(phonebook['Chris'])
 
 
 print()
@@ -78,7 +79,8 @@ print()
 print('*****  start section 5 - iterate through keys ********')
 print()
 
-
+for key in phonebook:
+    print(key, phonebook[key])
 
 
 print()
@@ -94,8 +96,9 @@ print()
 print('*****  start section 6 - iterate through values  ********')
 print()
 
-
-
+for value in phonebook.values():
+    print(value)
+'''
 
 print()
 print('*****  end section 6 ********')
