@@ -1,9 +1,10 @@
 #open file
 infile = open('AI.txt', 'r')
-#get rid of special characters
+#right sentence to list and split it up by spaces
 sentence = infile.readline()
 tempList = sentence.split()
 sentenceList = []
+#loop to write alphanumeric char to temp word and add to list
 for word in tempList:
     temp = ''
     if not word.isalnum():
