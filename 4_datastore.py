@@ -14,7 +14,7 @@ room-number,use,sq-ft,price
 104,office,150,100
 
 '''
-
+#create the retail space file and initialize object
 space = open('retail_space.csv', 'w', newline='')
 writer_file = csv.writer(space, delimiter=',')
 
@@ -47,10 +47,10 @@ datastore = { "medical":[
 
       ]
 }
-
+#create headers for csv file
 header = ['room-number', 'use', 'sq-ft', 'price']
 writer_file.writerow(header)
-
+#write the different values for each room to a list and write to csv file
 for x in datastore["medical"]:
   temp = []
   for key in x:
