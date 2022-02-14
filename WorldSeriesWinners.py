@@ -15,11 +15,7 @@ for key in winsList:
     winsYear[year] = key
     winsCount[key] = value
     year += 1
-    if year == 1904:
-        keytemp = 'None'
-        winsYear[year] = keytemp
-        year += 1
-    elif year == 1994:
+    if year == 1904 or year == 1994:
         keytemp = 'None'
         winsYear[year] = keytemp
         year += 1
@@ -33,7 +29,7 @@ while x:
     else:
         count = winsCount[team]
         print(str(search) + ':', str(team) +',', str(count) + ' win(s)')
-    cont = input('Press enter to search again or x exit: ')
+    cont = input('Press enter to search again or x to exit: ')
     if cont == 'x':
         x = False
     
