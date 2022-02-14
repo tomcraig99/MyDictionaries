@@ -3,7 +3,7 @@
 # for each space represented as rows. Name your file 'retail_space.csv.
 import csv
 
-'''
+"""
 Your final output should look like:
 
 room-number,use,sq-ft,price
@@ -13,46 +13,28 @@ room-number,use,sq-ft,price
 103,examination,125,150
 104,office,150,100
 
-'''
-#create the retail space file and initialize object
-space = open('retail_space.csv', 'w', newline='')
-writer_file = csv.writer(space, delimiter=',')
+"""
+# create the retail space file and initialize object
+space = open("retail_space.csv", "w", newline="")
+writer_file = csv.writer(space, delimiter=",")
 
-datastore = { "medical":[
-      { "room-number": 100,
-        "use": "reception",
-        "sq-ft": 50,
-        "price": 75
-      },
-      { "room-number": 101,
-        "use": "waiting",
-        "sq-ft": 250,
-        "price": 75
-      },
-      { "room-number": 102,
-        "use": "examination",
-        "sq-ft": 125,
-        "price": 150
-      },
-      { "room-number": 103,
-        "use": "examination",
-        "sq-ft": 125,
-        "price": 150
-      },
-      { "room-number": 104,
-        "use": "office",
-        "sq-ft": 150,
-        "price": 100
-      }
-
-      ]
+datastore = {
+    "medical": [
+        {"room-number": 100, "use": "reception", "sq-ft": 50, "price": 75},
+        {"room-number": 101, "use": "waiting", "sq-ft": 250, "price": 75},
+        {"room-number": 102, "use": "examination", "sq-ft": 125, "price": 150},
+        {"room-number": 103, "use": "examination", "sq-ft": 125, "price": 150},
+        {"room-number": 104, "use": "office", "sq-ft": 150, "price": 100},
+    ]
 }
-#create headers for csv file
-header = ['room-number', 'use', 'sq-ft', 'price']
+# create headers for csv file
+header = ["room-number", "use", "sq-ft", "price"]
 writer_file.writerow(header)
-#write the different values for each room to a list and write to csv file
+# write the different values for each room to a list and write to csv file
 for x in datastore["medical"]:
-  temp = []
-  for key in x:
-    temp.append(x[key])
-  writer_file.writerow(temp)
+    temp = []
+    for key in x:
+        temp.append(x[key])
+    writer_file.writerow(temp)
+# close the file
+writer_file.close()
